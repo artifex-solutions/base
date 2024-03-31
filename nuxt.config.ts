@@ -6,20 +6,15 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+	devtools: { enabled: true },
 
-  modules: ['pruvious', 	'@vueuse/nuxt',
-  '@vue-macros/nuxt'],
+	modules: ['pruvious', '@vueuse/nuxt', '@vue-macros/nuxt'],
 
-  nitro: {
-		// preset: 'bun',
-	},
-
-  typescript: {
+	typescript: {
 		strict: true,
 	},
 
-  $development: {
+	$development: {
 		sourcemap: true,
 	},
 
