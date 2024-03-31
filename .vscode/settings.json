@@ -1,0 +1,16 @@
+{
+	"css.validate": false,
+	"prettier.enable": false,
+	"eslint.enable": true,
+  "eslint.validate": ["vue", "javascript", "typescript", "typescriptvue", "javascriptvue"],
+	"emmet.includeLanguages": {
+    "postcss": "css"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+	},
+	"tailwindCSS.includeLanguages": {
+    "vue": "html",
+    "vue-html": "html",
+  }
+}

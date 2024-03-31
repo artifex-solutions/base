@@ -1,4 +1,3 @@
-
 <template>
-  <span>Hello from test component</span>
+	<span>Hello from test component</span>
 </template>

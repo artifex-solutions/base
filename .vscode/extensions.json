@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"vue.volar",
+		"bradlc.vscode-tailwindcss",
+		"dotenv.dotenv-vscode",
+		"skyboost.nuxt-3-goto"
+	]
+}
