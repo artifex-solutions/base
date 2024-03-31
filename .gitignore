@@ -1,0 +1,31 @@
+node_modules
+*.log
+.nuxt
+nuxt.d.ts
+.output
+.data
+package-lock.json
+framework
+dist
+.DS_Store
+
+# Yarn
+.yarn/cache
+.yarn/*state*
+
+# Local History
+.history
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Pruvious dev/build outputs
+.autoload.sql
+.pruvious
+.ssh.*
+/.uploads
+/public/uploads
+pruvious.db
+pruvious.db-journal

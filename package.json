@@ -1,0 +1,19 @@
+{
+  "name": "pruvious-base",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev": "pruvious dev",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "eslint": "^8.28.0",
+    "nuxt": "^3.11.1",
+    "pruvious": "^3.11.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "typescript": "^4.9.3"
+  }
+}
