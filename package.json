@@ -21,8 +21,10 @@
     "pruvious": "^3.11.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
-    "@vue-macros/nuxt": "^1.8.1",
-    "@vueuse/nuxt": "^10.3.0",
     "@vueuse/router": "^10.6.0"
+  },
+  "dependencies": {
+    "@vue-macros/nuxt": "^1.8.1",
+    "@vueuse/nuxt": "^10.3.0"
   }
 }
