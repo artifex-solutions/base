@@ -8,7 +8,7 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 
-	modules: ['pruvious', '@vueuse/nuxt', '@vue-macros/nuxt'],
+	modules: ['pruvious', '@vueuse/nuxt', '@vue-macros/nuxt', '@nuxtjs/tailwindcss'],
 
 	typescript: {
 		strict: true,
