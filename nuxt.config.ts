@@ -14,6 +14,10 @@ export default defineNuxtConfig({
 		strict: true,
 	},
 
+	nitro: {
+		preset: 'bun',
+	},
+
 	$development: {
 		sourcemap: true,
 	},
