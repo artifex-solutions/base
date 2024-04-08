@@ -26,7 +26,7 @@ export default {
 				const success = colord('hsl(161 82% 36%)')
 				const help = colord('hsl(213 97% 87%)')
 				const info = colord('hsl(213 97% 87%)')
-				const muted = colord('	hsl(215 20% 65%)')
+				const muted = colord('hsl(215 20% 65%)')
 				const warning = colord('hsl(30 100% 48%)')
 				const danger = colord('hsl(12 92% 50%)')
 
@@ -36,11 +36,8 @@ export default {
 						DEFAULT: surface.toHslString(),
 						alt: createAltColor(surface),
 						content: createContentColor(surface),
-						// content: 'hsl(217, 33%, 17%)',
 						section: 'hsl(210 16.7% 92.2%)',
 						card: 'hsl(0 0% 100%)',
-						overlay: 'hsl(0 0% 0% / 10%)',
-						border: 'hsl(213 27% 84%)',
 					},
 					// Brand color
 					primary: {
@@ -107,6 +104,15 @@ export default {
 					return colord(newColor).toHslString()
 				}
 			},
+			borderColor: {
+				DEFAULT: 'hsl(213 27% 84%)',
+			},
+			borderWidth: {
+				DEFAULT: '2px',
+			},
+			ringColor: ({ theme }) => ({
+				DEFAULT: theme('colors.primary.DEFAULT'),
+			}),
 			spacing: {
 				xs: '0.25rem', // e.g. space between small badges in a list
 				sm: '0.5rem', // e.g. space between bigger elements in a list
@@ -121,9 +127,13 @@ export default {
 		// Overlay / mask component
 		plugin(function ({ addComponents, theme }) {
 			addComponents({
-				'.overlay': {
-					background: theme('colors.surface.overlay'),
-					backdropFilter: theme('backdropBlur.sm'),
+				'.bg-overlay': {
+					background: 'hsl(0 0% 0% / 10%)',
+					backdropFilter: `blur(${theme('backdropBlur.sm')})`,
+				},
+				'.bg-glass': {
+					background: 'hsl(0 0% 100% / 10%)',
+					backdropFilter: `blur(${theme('backdropBlur.sm')})`,
 				},
 			})
 		}),

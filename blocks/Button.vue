@@ -25,6 +25,7 @@ defineProps({
 			warning: 'Warning',
 			danger: 'Danger',
 			ghost: 'Ghost',
+			glass: 'Glass',
 		},
 		default: 'secondary',
 		required: true,
@@ -42,5 +43,6 @@ const severityClasses = {
 	warning: 'bg-warning hover:bg-warning-alt text-warning-content',
 	danger: 'bg-danger hover:bg-danger-alt text-danger-content',
 	ghost: 'bg-surface hover:bg-surface-alt text-surface-content',
+	glass: 'bg-glass hover:bg-white/20 text-surface-content',
 }
 </script>
