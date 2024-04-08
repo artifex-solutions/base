@@ -1,5 +1,0 @@
-[install]
-optional = false
-
-[run]
-bun = true
