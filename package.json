@@ -9,8 +9,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.11.1",
-    "pruvious": "^3.11.2"
   },
   "dependencies": {
     "@nuxt/eslint-config": "^0.2.0",
@@ -28,6 +26,8 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "primevue": "^3.51.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "nuxt": "^3.11.1",
+    "pruvious": "^3.11.2"
   }
 }
