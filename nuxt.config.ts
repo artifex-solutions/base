@@ -10,7 +10,14 @@ export default defineNuxtConfig({
 
 	modules: ['pruvious', '@vueuse/nuxt', '@nuxtjs/tailwindcss', 'nuxt-primevue'],
 
-	primevue: {},
+	primevue: {
+		options: {
+			unstyled: true,
+		},
+		importPT: { from: join(currentDir, 'presets/base/') },
+	},
+
+	css: [join(currentDir, 'assets/styles/main.css')],
 
 	typescript: {
 		strict: true,

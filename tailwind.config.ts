@@ -7,7 +7,12 @@ extend([mixPlugin])
 
 export default {
 	// This is not used when layer is consumed, so this is not defined in nuxt.config, since we only want this to happen in the playground
-	content: ['./blocks/**/*.vue', './components/**/*.vue', './layouts/**/*.vue'],
+	content: [
+		'./blocks/**/*.vue',
+		'./components/**/*.vue',
+		'./layouts/**/*.vue',
+		'./presets/base/**/*.js',
+	],
 	darkMode: 'media', // Toggleable dark mode: https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
 	theme: {
 		borderRadius: {
@@ -118,7 +123,8 @@ export default {
 				sm: '0.5rem', // e.g. space between bigger elements in a list
 				md: '1rem', // e.g. paddings and margins for buttons or molecules
 				lg: '2rem', // e.g. padding and margins for cards or organisms
-				xl: '4rem', // e.g. space between sections on a page
+				// xl: '4rem',
+				section: '4rem', // e.g. space between sections on a page
 			},
 		},
 	},

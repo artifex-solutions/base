@@ -1,4 +1,4 @@
-# Nuxt Layer Starter
+# @artifex/base
 
 Create Nuxt extendable layer with this GitHub template.
 

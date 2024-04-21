@@ -1,19 +1,60 @@
 <template>
-	<button
-		class="inline-block whitespace-nowrap rounded px-md py-sm outline-none transition focus:ring-4"
-		:class="severityClasses[severity]"
-	>
-		{{ label }}
-	</button>
+	<LayoutSection>
+		<Button
+			:label="label"
+			:severity="btnSeverity"
+			:link="link"
+			:raised="raised"
+			:rounded="rounded"
+			:outlined="outlined"
+			:text="text"
+			:class="{ 'bg-glass': glass }"
+		/>
+	</LayoutSection>
 </template>
 
 <script lang="ts" setup>
-import { defineBlock, selectField, textField } from '#pruvious'
+import { defineBlock, selectField, textField, switchField } from '#pruvious'
+import type { PropType } from 'vue'
 
-defineBlock({ icon: 'Mouse' })
+defineBlock({
+	icon: 'Diamond',
+	// Overrides the automatically generated block label
+	label: 'Custom button',
 
-defineProps({
+	// Text displayed in the block picker
+	description: 'This is a test component',
+
+	// Slot labels and allowed child blocks
+	slots: {},
+})
+
+const props = defineProps({
 	label: textField({ required: true }),
+	text: switchField({
+		label: 'Display only text',
+		default: false,
+	}),
+	outlined: switchField({
+		label: 'Display with outline instead of background',
+		default: false,
+	}),
+	rounded: switchField({
+		label: 'Display as pill shape',
+		default: false,
+	}),
+	raised: switchField({
+		label: 'Display with a shadow',
+		default: false,
+	}),
+	link: switchField({
+		label: 'Display as link',
+		default: false,
+	}),
+	glass: switchField({
+		label: 'Display glassmorphic',
+		default: false,
+	}),
 	severity: selectField({
 		choices: {
 			primary: 'Primary',
@@ -24,25 +65,16 @@ defineProps({
 			info: 'Info',
 			warning: 'Warning',
 			danger: 'Danger',
-			ghost: 'Ghost',
-			glass: 'Glass',
 		},
 		default: 'secondary',
 		required: true,
 		placeholder: 'Select a severity',
-	}),
+	}) as PropType<
+		'primary' | 'secondary' | 'contrast' | 'success' | 'help' | 'info' | 'warning' | 'danger'
+	>,
 })
 
-const severityClasses = {
-	primary: 'bg-primary hover:bg-primary-alt text-primary-content',
-	secondary: 'bg-secondary hover:bg-secondary-alt text-secondary-content',
-	contrast: 'bg-contrast hover:bg-contrast-alt text-contrast-content',
-	success: 'bg-success hover:bg-success-alt text-success-content',
-	help: 'bg-help hover:bg-help-alt text-help-content',
-	info: 'bg-info hover:bg-info-alt text-info-content',
-	warning: 'bg-warning hover:bg-warning-alt text-warning-content',
-	danger: 'bg-danger hover:bg-danger-alt text-danger-content',
-	ghost: 'bg-surface hover:bg-surface-alt text-surface-content',
-	glass: 'bg-glass hover:bg-white/20 text-surface-content',
-}
+const btnSeverity = computed(() => {
+	return props.severity === 'primary' ? undefined : props.severity
+})
 </script>
